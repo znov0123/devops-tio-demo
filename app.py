@@ -4,7 +4,7 @@ from tenable.cs import ContainerSecurity
 
 app = Flask(__name__)
 
-cs = ContainerSecurity(os.environ('TENABLE_ACCESS_KEY'),os.environ('TENABLE_SECRET_KEY'))
+cs = ContainerSecurity(os.environ['TENABLE_ACCESS_KEY'],os.environ['TENABLE_SECRET_KEY'])
 
 @app.route('/')
 def images():
