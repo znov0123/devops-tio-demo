@@ -19,7 +19,7 @@
         <div class="panel panel-danger">
           <div class="panel-body">
             {% for item in items %}
-            <h1> <a href='/image/{{ item.repoName }}/{{ item.name }}/{{ item.tag }}'> {{ item.repoName }} - {{ item.name }} - {{ item.tag }} </a></h1>
+            <h4> <a href='/image/{{ item.repoName }}/{{ item.name }}/{{ item.tag }}'> {{ item.repoName }} - {{ item.name }} - {{ item.tag }} </a></h4>
             <p> Operating System: {{ item.os }}<br />
                 Risk score: {{ item.score }}<br />
                 Vulnerability Count: {{ item.numberOfVulns }}<br />
