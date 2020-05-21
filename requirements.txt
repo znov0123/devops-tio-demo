@@ -1,5 +1,5 @@
-flask==0.10.1
-gunicorn==19.6.0
+flask
+gunicorn
 nose
 unittest-xml-reporting
 pyTenable
