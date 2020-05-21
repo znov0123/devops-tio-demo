@@ -72,6 +72,9 @@ def pushToImage(containerName, tag, dockerUser, dockerPassword){
 
 def runApp(containerName, tag, dockerHubUser, httpPort, accessKey,secretKey){
     //sh "docker pull $dockerHubUser/$containerName"
+    try {
+        sh "docker rm devops-tio-demo"
+    } catch(error){}
     sh "docker run -d --rm -p $httpPort:$httpPort -e TENABLE_ACCESS_KEY=$accessKey -e TENABLE_SECRET_KEY=$secretKey --name $containerName $dockerHubUser/$containerName:$tag"
     echo "Application started on port: ${httpPort} (http)"
 }

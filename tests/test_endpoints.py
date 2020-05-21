@@ -1,4 +1,4 @@
-from app import app, db
+from app import app
 from flask import url_for
 import unittest
 import xmlrunner
@@ -14,8 +14,6 @@ class FlaskTodosTest(unittest.TestCase):
         """Assert that user successfully lands on homepage"""
         result = self.app.get('/')
         self.assertEqual(result.status_code, 200)
-
-
 
 if __name__ == '__main__':
     unittest.main(testRunner=xmlrunner.XMLTestRunner(output='test-reports'))
